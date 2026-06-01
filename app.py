@@ -58,11 +58,59 @@ skills_database = [
 # ----------------------------------
 st.title("🚀 AI Resume Analyzer")
 
+st.caption(
+    "Upload your resume and compare it against a job description to identify matching skills, missing skills, and career recommendations."
+)
+
 # ----------------------------------
-# Job Description
+# Sample Job Description
 # ----------------------------------
+sample_jd = """
+We are looking for a motivated Artificial Intelligence & Data Science student with knowledge of machine learning, data analytics, cloud computing, and software development.
+
+Responsibilities:
+- Build and train machine learning models
+- Analyze and visualize data
+- Develop AI-powered applications
+- Conduct research and provide factually accurate reports
+- Collaborate with cross-functional teams
+- Maintain documentation and process reports
+
+Required Skills:
+Python
+SQL
+Machine Learning
+Deep Learning
+TensorFlow
+Data Analysis
+Problem Solving
+Analytical Thinking
+Attention to Detail
+Communication Skills
+Git
+GitHub
+
+Preferred Skills:
+AWS
+Pandas
+NumPy
+Excel
+Power BI
+Docker
+Cloud Computing
+Data Visualization
+"""
+
+if "job_description" not in st.session_state:
+    st.session_state.job_description = ""
+
+if st.button("📋 Load Sample Job Description"):
+    st.session_state.job_description = sample_jd
+
 job_description = st.text_area(
-    "Paste Job Description Here"
+    "Paste Job Description Here",
+    value=st.session_state.job_description,
+    height=250
 )
 
 # ----------------------------------
