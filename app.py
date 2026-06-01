@@ -110,7 +110,7 @@ if st.button("📋 Load Sample Job Description"):
 job_description = st.text_area(
     "Paste Job Description Here",
     value=st.session_state.job_description,
-    height=250
+    height=150
 )
 
 # ----------------------------------
