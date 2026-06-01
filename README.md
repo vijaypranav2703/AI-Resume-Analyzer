@@ -53,4 +53,3 @@ I built this project to understand how resume screening systems work and to gain
 
 Artificial Intelligence & Data Science Student
 
-GitHub: github.com/vijaypranav2703
