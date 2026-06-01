@@ -222,15 +222,21 @@ if uploaded_file:
         # ----------------------------------
         st.subheader("📊 Resume Match Scores")
 
-        st.progress(int(skill_match_score))
+col1, col2, col3 = st.columns(3)
 
-        st.success(
-            f"📄 Text Similarity Score: {match_score}%"
-        )
+col1.metric("Skills Found", len(found_skills))
+col2.metric("Missing Skills", len(missing_skills))
+col3.metric("Skill Match", f"{skill_match_score}%")
 
-        st.info(
-            f"🎯 Skill Match Score: {skill_match_score}%"
-        )
+st.progress(int(skill_match_score))
+
+st.success(
+    f"📄 Text Similarity Score: {match_score}%"
+)
+
+st.info(
+    f"🎯 Skill Match Score: {skill_match_score}%"
+)
 
         # ----------------------------------
         # Resume Rating
