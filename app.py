@@ -226,7 +226,7 @@ col1, col2, col3 = st.columns(3)
 
 col1.metric("Skills Found", len(found_skills))
 col2.metric("Missing Skills", len(missing_skills))
-col3.metric("Skill Match", f"{skill_match_score}%")
+col3.metric("Skill Match", f"{skill_match_score:.2f}%")
 
 st.progress(int(skill_match_score))
 
